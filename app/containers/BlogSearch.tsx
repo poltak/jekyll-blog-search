@@ -28,14 +28,18 @@ class BlogSearchContainer extends React.Component<Props, State> {
       {
         title: 'First blog post',
         subtitle: 'This is fun',
-        date: '03 October',
-        link: 'http://www.google.com',
+        date: '03 October 2016',
+        url: 'http://www.google.com',
+        category: 'Interesting thoughts',
+        tags: ['fun', 'interactive', 'typescript'],
       },
       {
         title: 'Second blog post',
         subtitle: 'This is still fun...',
-        date: '03 December',
-        link: 'http://www.google.com',
+        date: '03 December 2015',
+        url: 'http://www.google.com',
+        category: 'Less interesting thoughts',
+        tags: ['group activity', 'github'],
       },
     ],
   };
