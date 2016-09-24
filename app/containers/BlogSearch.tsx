@@ -1,16 +1,26 @@
 import * as React from 'react';
 import { BlogList, BlogListItem, SearchBar } from '../components';
 
-interface Props { posts: [Object]; }
-interface State {}
+interface Props { initPosts: [Object]; }
+interface State {
+  posts?: [Object];
+  searchVal?: string;
+}
 
 class BlogSearchContainer extends React.Component<Props, State> {
+  public state: State;
+
   constructor(props: Props) {
     super(props);
+
+    this.state = {
+      posts: props.initPosts, // Props assignment to state used for initialisation only
+      searchVal: '',
+    };
   }
 
   private static defaultProps: Props = {
-    posts: [
+    initPosts: [
       {
         title: 'First blog post',
         subtitle: 'This is fun',
@@ -26,13 +36,17 @@ class BlogSearchContainer extends React.Component<Props, State> {
     ],
   };
 
+  private onSearchChange = (event) => this.setState({ searchVal: event.target.value });
+
   private getListItems = () =>
-    this.props.posts.map((post, index) => <BlogListItem key={index} post={post} />);
+    this.state.posts.map((post, index) => <BlogListItem key={index} post={post} />);
 
   public render() {
+    const { posts, searchVal } = this.state;
+
     return (
       <div className="jekyll-blog-search">
-        <SearchBar />
+        <SearchBar value={searchVal} onChange={this.onSearchChange} />
         <BlogList>
           {this.getListItems()}
         </BlogList>
