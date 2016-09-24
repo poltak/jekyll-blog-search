@@ -7,7 +7,7 @@ const SearchBar = ({ value = '', onChange = f => f }) => (
       <FormGroup controlId="formBasicText">
         <FormControl
           type="text"
-          placeholder="Post name..."
+          placeholder="Search posts..."
           value={value}
           onChange={onChange}
         />
