@@ -1,7 +1,8 @@
 import SearchBar from './SearchBar';
-import BlogList from './BlogList';
+import BlogList, { BlogListItem } from './BlogList';
 
 export {
   SearchBar,
   BlogList,
+  BlogListItem,
 };

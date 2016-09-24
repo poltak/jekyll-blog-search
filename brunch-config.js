@@ -1,4 +1,9 @@
 module.exports = {
+  npm: {
+    styles: {
+      bootstrap: ['dist/css/bootstrap.css'],
+    },
+  },
   files: {
     javascripts: {
       joinTo: {
