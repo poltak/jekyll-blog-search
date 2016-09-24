@@ -8,3 +8,20 @@
   margin: 0 auto;
   margin-top: 50px;
 }
+
+.jekyll-blog-search {
+  &__item {
+    &__title {
+      font-size: 36px;
+      margin-top: 20px;
+    }
+    &__subtitle {
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    &__date {
+      font-size: 16px;
+      color: #808080;
+    }
+  }
+}
