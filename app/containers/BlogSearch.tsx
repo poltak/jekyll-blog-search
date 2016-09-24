@@ -1,10 +1,14 @@
 import * as React from 'react';
 import { BlogList, BlogListItem, SearchBar } from '../components';
+import postFilter, { PostType } from '../util/postFilter';
 
-interface Props { initPosts: [Object]; }
+interface Props {
+  initPosts: PostType[]; // Intended to be static props; should never change from parent
+}
+
 interface State {
-  posts?: [Object];
-  searchVal?: string;
+  posts: PostType[];
+  searchVal: string;
 }
 
 class BlogSearchContainer extends React.Component<Props, State> {
@@ -36,22 +40,16 @@ class BlogSearchContainer extends React.Component<Props, State> {
     ],
   };
 
-  private onSearchChange = (event) => this.setState({ searchVal: event.target.value });
+  private onSearchChange = (event) => {
+    const { target: { value } } = event;
 
-  private getListItems = () => this.state.posts
-    .filter((post: { title: '', subtitle: '', date: '' }) => {
-      const title = post.title.toLowerCase();
-      const subtitle = post.subtitle.toLowerCase();
-      const date = post.date.toLowerCase();
-      const val = this.state.searchVal.toLowerCase();
+    const posts = this.props.initPosts.filter(postFilter(value));
 
-      const titleMatch = title.indexOf(val) !== -1;
-      const subtitleMatch = subtitle.indexOf(val) !== -1;
-      const dateMatch = date.indexOf(val) !== -1;
+    this.setState({ searchVal: value, posts });
+  }
 
-      return titleMatch || subtitleMatch || dateMatch;
-    })
-    .map((post, index) => <BlogListItem key={index} post={post} />);
+  private getListItems = () =>
+    this.state.posts.map((post, index) => <BlogListItem key={index} post={post} />);
 
   public render() {
     const { posts, searchVal } = this.state;
