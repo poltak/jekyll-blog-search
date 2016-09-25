@@ -4,7 +4,7 @@ export interface PostType {
   date: string;
   url: string;
   category: string;
-  tags: string[];
+  tags: string;
 };
 
 /**
