@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BlogList, BlogListItem, SearchBar } from '../components';
-import postFilter, { PostType } from '../util/postFilter';
+import { PostType } from '../util/post';
 import * as Fuse from 'fuse.js';
 
 interface Props {

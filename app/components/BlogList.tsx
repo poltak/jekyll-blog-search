@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ListGroup } from 'react-bootstrap';
-import { PostType } from '../util/postFilter';
+import { PostType } from '../util/post';
 
 export const BlogListItem = ({ post: { url, title, subtitle, date } }: { post: PostType }) => (
   <a href={url} className="jekyll-blog-search__item list-group-item">
