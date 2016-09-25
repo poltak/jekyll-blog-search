@@ -1,9 +1,9 @@
 {
   "name": "jekyll-blog-search",
-  "description": "",
-  "author": "Jonathan Poltak Samosir",
-  "private": true,
-  "version": "0.0.1",
+  "description": "A simply reactive searchbar for Jekyll blog posts",
+  "author": "Jonathan Poltak Samosir <jonathan.samosir@gmail.com>",
+  "private": false,
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/poltak/jekyll-blog-search"

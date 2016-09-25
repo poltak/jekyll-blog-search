@@ -19,8 +19,10 @@
 nbproject
 Thumbs.db
 
-# NPM packages folder.
+# NPM stuff
 node_modules/
+.npmrc
+npm-debug.log
 
 # Brunch output folder.
 public/

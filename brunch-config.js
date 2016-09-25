@@ -6,15 +6,30 @@ module.exports = {
   },
   files: {
     javascripts: {
-      joinTo: {
-        'vendor.js': /^(?!app)/,
-        'app.js': /^app/,
-      },
+      'vendor.js': /^(?!app)/,
+      'app.js': /^app/,
     },
     stylesheets: {
       joinTo: {
         'app.css': /^app/,
         'vendor.css': /^node_modules/,
+      },
+    },
+  },
+  overrides: {
+    production: {
+      paths: {
+        public: './lib',
+      },
+      files: {
+        javascripts: {
+          joinTo: 'app.js',
+        },
+        stylesheets: {
+          joinTo: {
+            'app.css': /^app/,
+          },
+        },
       },
     },
   },
