@@ -30,3 +30,6 @@ public/
 
 # TypeScript Typings data
 typings/
+
+# Prod build
+lib/
