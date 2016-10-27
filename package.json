@@ -4,6 +4,8 @@
   "author": "Jonathan Poltak Samosir <jonathan.samosir@gmail.com>",
   "private": false,
   "version": "0.1.0",
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/poltak/jekyll-blog-search"
@@ -13,6 +15,10 @@
     "prod": "brunch build --production"
   },
   "dependencies": {
+    "@types/fuse": "^2.2.31",
+    "@types/react": "^0.14.43",
+    "@types/react-bootstrap": "^0.0.33",
+    "@types/react-dom": "^0.14.18",
     "bootstrap": "^3.3.7",
     "fuse.js": "^2.5.0",
     "react": "~15.3.0",
