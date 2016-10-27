@@ -1,8 +1,9 @@
+/// <reference path="./BlogList.d.ts"/>
+
 import * as React from 'react';
 import { ListGroup } from 'react-bootstrap';
-import { PostType } from '../util/post';
 
-export const BlogListItem = ({ post: { url, title, subtitle, date } }: { post: PostType }) => (
+export const BlogListItem = ({ post: { url, title, subtitle, date } }: IBlogListItemProps) => (
   <a href={url} className="jekyll-blog-search__item list-group-item">
     <h2 className="jekyll-blog-search__item__title">{title}</h2>
     <h3 className="jekyll-blog-search__item__subtitle">{subtitle}</h3>
@@ -10,7 +11,7 @@ export const BlogListItem = ({ post: { url, title, subtitle, date } }: { post: P
   </a>
 );
 
-const BlogList = ({ children = [] }) => (
+const BlogList = ({ children }) => (
   <div className="jekyll-blog-search__list">
     <ListGroup>
       {children}
