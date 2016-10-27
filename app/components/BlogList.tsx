@@ -11,7 +11,7 @@ export const BlogListItem = ({ post: { url, title, subtitle, date } }: IBlogList
   </a>
 );
 
-const BlogList = ({ children }) => (
+const BlogList = ({ children = [] }) => (
   <div className="jekyll-blog-search__list">
     <ListGroup>
       {children}
