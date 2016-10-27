@@ -23,6 +23,7 @@ Thumbs.db
 node_modules/
 .npmrc
 npm-debug.log
+yarn-error.log
 
 # Brunch output folder.
 public/
