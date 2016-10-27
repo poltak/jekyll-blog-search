@@ -12,7 +12,8 @@
   },
   "scripts": {
     "start": "brunch watch --server",
-    "prod": "brunch build --production"
+    "prod": "brunch build --production",
+    "prepublishOnly": "npm run prod"
   },
   "dependencies": {
     "@types/fuse": "^2.2.31",
