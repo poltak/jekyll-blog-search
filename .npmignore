@@ -1,0 +1,9 @@
+# Source files
+app/
+
+# Dev files
+public/
+
+# Yarn crap
+yarn-error.log
+
