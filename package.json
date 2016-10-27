@@ -3,7 +3,7 @@
   "description": "A simply reactive searchbar for Jekyll blog posts",
   "author": "Jonathan Poltak Samosir <jonathan.samosir@gmail.com>",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./lib/main.js",
   "types": "./lib/main.d.ts",
   "repository": {
