@@ -1,8 +1,2 @@
-import SearchBar from './SearchBar';
-import BlogList, { BlogListItem } from './BlogList';
-
-export {
-  SearchBar,
-  BlogList,
-  BlogListItem,
-};
+export { default as SearchBar } from './SearchBar';
+export { default as BlogList, BlogListItem } from './BlogList';
