@@ -15,7 +15,7 @@ class BlogSearchContainer extends React.Component<IProps, IState> {
     };
   }
 
-  private static defaultProps: IProps = {
+  public static defaultProps: IProps = {
     initPosts: [
       {
         title: 'First blog post',
@@ -57,7 +57,7 @@ class BlogSearchContainer extends React.Component<IProps, IState> {
     this.state.posts.map((post, index) => <BlogListItem key={index} post={post} />);
 
   public render() {
-    const { posts, searchVal } = this.state;
+    const { searchVal } = this.state;
 
     return (
       <div className="jekyll-blog-search">
