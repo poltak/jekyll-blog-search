@@ -1,9 +1,8 @@
-/// <reference path="../components/SearchBar.d.ts"/>
-
 import * as React from 'react';
 import { FormGroup, FormControl } from 'react-bootstrap';
+import { ISearchBarProps as IProps } from '../interfaces';
 
-const SearchBar = ({ value, onChange }: ISearchBarProps) => (
+const SearchBar = ({ value, onChange }: IProps) => (
   <div className="jekyll-blog-search__search">
     <form>
       <FormGroup controlId="formBasicText">

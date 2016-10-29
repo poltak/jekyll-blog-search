@@ -1,13 +1,12 @@
-/// <reference path="./BlogSearch.d.ts"/>
-
 import * as React from 'react';
 import * as Fuse from 'fuse.js';
 import { BlogList, BlogListItem, SearchBar } from '../components';
+import { IBlogSearchProps as IProps, IBlogSearchState as IState } from '../interfaces';
 
-class BlogSearchContainer extends React.Component<IBlogSearchProps, IBlogSearchState> {
-  public state: IBlogSearchState;
+class BlogSearchContainer extends React.Component<IProps, IState> {
+  public state: IState;
 
-  constructor(props: IBlogSearchProps) {
+  constructor(props: IProps) {
     super(props);
 
     this.state = {
@@ -16,7 +15,7 @@ class BlogSearchContainer extends React.Component<IBlogSearchProps, IBlogSearchS
     };
   }
 
-  private static defaultProps: IBlogSearchProps = {
+  private static defaultProps: IProps = {
     initPosts: [
       {
         title: 'First blog post',
