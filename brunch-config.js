@@ -6,8 +6,10 @@ module.exports = {
   },
   files: {
     javascripts: {
-      'vendor.js': /^(?!app)/,
-      'app.js': /^app/,
+      joinTo: {
+        'vendor.js': /^(?!app)/,
+        'app.js': /^app/,
+      },
     },
     stylesheets: {
       joinTo: {
