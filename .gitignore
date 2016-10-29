@@ -33,3 +33,4 @@ typings/
 
 # Prod build
 lib/
+.idea
